@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+  - name: Stop the running container
+    command: sudo docker stop customedcontainer
+    ignore_errors: True
+
+  - name: Remove the running container
+    command: sudo docker rm customedcontainer
+    ignore_errors: True
+
+  - name: Remove the running image
+    command: sudo docker rmi customedimage
+    ignore_errors: True
+
+  - name: Create image from dockerfile
+    command: sudo docker build -t customedimage .
+
+  - name: Create and run the container
+    command: sudo docker run -d -p 8080:8080 --name customedcontainer customedimage
+

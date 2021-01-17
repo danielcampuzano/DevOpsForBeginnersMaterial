@@ -1,0 +1,9 @@
+- En este momento la aplicación no está contenerizada totalmente porque lo que se hace desde el Jenkins
+es hacer envío del war via ssh hacia el servidor en donde se va a hacer el despliegue (deployment server) y después por comandos
+en el deployment server se copia el war al contenedor en docker.
+Cómo lo veo lo que se tiene contenerizado de cierta forma es el tomcat.
+
+- Podría desde el jenkins hacer algo similar a lo que se hizo con circle ci en el proyecto de python que es crear una imagen
+y subirla a dockerhub y luego en el deployment server simplemente descargar la imagen y lanzarla, puede ser haciendo uso del mismo ansible.
+La imagen que se crea en el Dockerfile para contenerizar la aplicación ya debería incluir el tomcat y las instrucciones para pegar el war
+dentro de webapps.

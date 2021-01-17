@@ -1,0 +1,88 @@
+Lanzada por el usuario [8mha:////4Gc5NQEn0WZijzHVNBbH4nW+6xkiYjvZTuuifSOPTjB7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgYe/dLi1CL9lMS8zNQcANhNTWPBAAAA[0mDaniel Campuzano
+Running as SYSTEM
+Ejecutando.en el espacio de trabajo /var/lib/jenkins/jobs/Deployment/workspace
+The recommended git tool is: NONE
+No credentials specified
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/rahulshettyacademy/DevopsBasics.git # timeout=10
+Fetching upstream changes from https://github.com/rahulshettyacademy/DevopsBasics.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/rahulshettyacademy/DevopsBasics.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision d3c50e1528a0c50c255dca6cb68b681b1d3be368 (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f d3c50e1528a0c50c255dca6cb68b681b1d3be368 # timeout=10
+Commit message: "Set up CI with Azure Pipelines"
+ > /usr/bin/git rev-list --no-walk d3c50e1528a0c50c255dca6cb68b681b1d3be368 # timeout=10
+[workspace] $ /usr/share/maven/bin/mvn test install
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] The project com.example.maven-project:maven-project:pom:1.0-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Maven Project                                                      [pom]
+[[1;34mINFO[m] Server                                                             [jar]
+[[1;34mINFO[m] Webapp                                                             [war]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36mcom.example.maven-project:maven-project[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Maven Project 1.0-SNAPSHOT                                [1/3][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mmaven-project[0;1m ---[m
+[[1;34mINFO[m] Installing /var/lib/jenkins/jobs/Deployment/workspace/pom.xml to /var/lib/jenkins/.m2/repository/com/example/maven-project/maven-project/1.0-SNAPSHOT/maven-project-1.0-SNAPSHOT.pom
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36mcom.example.maven-project:server[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Server 1.0-SNAPSHOT                                       [2/3][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mserver[0;1m ---[m
+[[1;34mINFO[m] Using 'utf-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/jobs/Deployment/workspace/server/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m @ [36mserver[0;1m ---[m
+[[1;34mINFO[m] Compiling 1 source file to /var/lib/jenkins/jobs/Deployment/workspace/server/target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] Unable to locate the Javac Compiler in:
+  /usr/lib/jvm/java-8-openjdk-amd64/jre/../lib/tools.jar
+Please ensure you are using JDK 1.4 or above and
+not a JRE (the com.sun.tools.javac.Main class is required).
+In most cases you can change the location of your Java
+installation by setting the JAVA_HOME environment variable.
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for Maven Project 1.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Maven Project ...................................... [1;32mSUCCESS[m [  0.211 s]
+[[1;34mINFO[m] Server ............................................. [1;31mFAILURE[m [  0.312 s]
+[[1;34mINFO[m] Webapp ............................................. [1;33mSKIPPED[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.636 s
+[[1;34mINFO[m] Finished at: 2020-11-25T21:02:24-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m on project [36mserver[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31mUnable to locate the Javac Compiler in:[m
+[[1;31mERROR[m] [1;31m  /usr/lib/jvm/java-8-openjdk-amd64/jre/../lib/tools.jar[m
+[[1;31mERROR[m] [1;31mPlease ensure you are using JDK 1.4 or above and[m
+[[1;31mERROR[m] [1;31mnot a JRE (the com.sun.tools.javac.Main class is required).[m
+[[1;31mERROR[m] [1;31mIn most cases you can change the location of your Java[m
+[[1;31mERROR[m] [1;31minstallation by setting the JAVA_HOME environment variable.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <args> -rf :server[m
+Build step 'Ejecutar tareas 'maven' de nivel superior' marked build as failure
+Finished: FAILURE
