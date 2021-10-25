@@ -7,3 +7,5 @@ Cómo lo veo lo que se tiene contenerizado de cierta forma es el tomcat.
 y subirla a dockerhub y luego en el deployment server simplemente descargar la imagen y lanzarla, puede ser haciendo uso del mismo ansible.
 La imagen que se crea en el Dockerfile para contenerizar la aplicación ya debería incluir el tomcat y las instrucciones para pegar el war
 dentro de webapps.
+
+/var/jenkins_home/jobs
